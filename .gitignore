@@ -1,0 +1,43 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore arquivos gerados pela build
+/build
+
+# Ignore arquivos de configuração
+/.vscode
+/.idea
+
+# Ignore arquivos de cache
+/.cache
+
+# Ignore arquivos temporários
+*.log
+*.tmp
+
+# Ignore arquivos de cobertura gerados pelo Jest
+coverage/
+
+# Ignore arquivos de configuração do ESLint
+.eslintcache
+
+# Ignore arquivos de configuração do Jest
+.jest
+
+# Ignore arquivos de configuração do TypeScript
+/tsconfig.tsbuildinfo
+
+# Ignore arquivos de configuração do editor (por exemplo, Visual Studio Code)
+/.vscode/
+
+# Ignore arquivos de ambiente local (por exemplo, .env.local)
+.env.local
+
+# Ignore arquivos de ambiente de desenvolvimento (por exemplo, .env.development)
+.env.development
+
+# Ignore arquivos de ambiente de produção (por exemplo, .env.production)
+.env.production
+
+# Ignore arquivos de ambiente de teste (por exemplo, .env.test)
+.env.test
