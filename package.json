@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/GabrielaZanetti/react-arquitetura-limpa.git",
-  "author": "Gabriela da Rosa Zanetti <36-gabriela.zanetti@users.noreply.yankee.unijui.edu.br>",
+  "author": "Gabriela da Rosa Zanetti",
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
@@ -21,7 +21,9 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "test": "jest",
-    "lint": "eslint src"
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn test -- --watch",
+    "test:staged": "yarn test -- --findRelatedTests",
+    "test:ci": "yarn test -- --coverage"
   }  
 }

@@ -1,0 +1,6 @@
+{
+    "*.{ts,tsx}": [
+        "eslit 'srx/**' --fix",
+        "yarn test:staged"
+    ]
+}
