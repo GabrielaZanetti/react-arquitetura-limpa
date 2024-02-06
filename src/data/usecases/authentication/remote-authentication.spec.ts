@@ -1,17 +1,5 @@
-interface HttpPostClient {
-    post (url: string): Promise<void>
-}
-
-class RemoteAuthentication {
-    constructor (
-        private readonly url: string,
-        private readonly HttpPostClient: HttpPostClient
-    ) {}
-
-    async auth (): Promise<void> {
-        await this.HttpPostClient.post(this.url)
-    }
-}
+import { HttpPostClient } from "data/protocols/http/http-post-client";
+import { RemoteAuthentication } from "./remote-authentication";
 
 describe('RemoteAuthentication', () => {
     test('Should call HttpPostClient with correct URL', async () => {
@@ -24,9 +12,9 @@ describe('RemoteAuthentication', () => {
             }
         }
         const url = 'any_url';
-        const httpClient = new HttpPostClientSpy();
-        const sut = new RemoteAuthentication(url, httpClient);
+        const httpPostClientSpy = new HttpPostClientSpy();
+        const sut = new RemoteAuthentication(url, httpPostClientSpy);
         await sut.auth();
-        expect(httpClient.url).toBe(url);
+        expect(httpPostClientSpy.url).toBe(url);
     })
 })
