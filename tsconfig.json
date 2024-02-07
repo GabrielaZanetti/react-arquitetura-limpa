@@ -14,6 +14,9 @@
       "jsx": "react",
       "rootDir": "src",
       "baseUrl": "src",
+      "paths": {
+        "@/*": ["*"]
+      },
       "noEmit": true
     },
     "include": ["src"],
