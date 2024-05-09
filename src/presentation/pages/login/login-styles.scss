@@ -54,24 +54,6 @@ button {
             font-size: 20px;
             text-transform: uppercase;
         }
-        .inputWrap {
-            margin-top: 16px;
-            display: flex;
-            position: relative;
-            align-items: center;
-            input {
-                flex-grow: 1;
-            }
-            .status {
-                height: 10px;
-                width: 10px;
-                border-radius: 50%;
-                background-color: $primaryDark;
-                position: absolute;
-                right: 8px;
-                cursor: help;
-            }
-        }
         .submit {
             margin-top: 16px;
         }
