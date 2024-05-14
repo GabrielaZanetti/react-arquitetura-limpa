@@ -25,7 +25,7 @@ describe('Login component', () => {
     afterEach(cleanup)
 
     test('Should start with initial state', () => {
-        const validationError = faker.random.words()
+        const validationError = faker.word.verb()
         const { sut } = makeSut({ validationError })
         const errorWrap = sut.getByTestId('error-wrap')
         expect(errorWrap.childElementCount).toBe(0)
@@ -40,7 +40,7 @@ describe('Login component', () => {
     })
 
     test('Should show email error if Validation fails', () => {
-        const validationError = faker.random.words()
+        const validationError = faker.word.verb()
         const { sut } = makeSut({ validationError })
         const emailInput = sut.getByTestId('email')
         fireEvent.input(emailInput, { target: { value: faker.internet.email() } })
@@ -50,7 +50,7 @@ describe('Login component', () => {
     })
 
     test('Should show password error if Validation fails', () => {
-        const validationError = faker.random.words()
+        const validationError = faker.word.verb()
         const { sut } = makeSut({ validationError })
         const passwordInput = sut.getByTestId('password')
         fireEvent.input(passwordInput, { target: { value: faker.internet.password() } })
