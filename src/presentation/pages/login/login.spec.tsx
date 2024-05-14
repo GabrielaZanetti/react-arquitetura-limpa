@@ -121,4 +121,12 @@ describe('Login component', () => {
         simulateValidSubmit(sut)
         expect(autenticationSpy.callsCount).toBe(1)
     })
+
+    test('Should not call Authentication if form is invalid', () => {
+        const validationError = faker.word.verb()
+        const { sut, autenticationSpy } = makeSut({ validationError })
+        populateEmailField(sut)
+        fireEvent.submit(sut.getByTestId('form'))
+        expect(autenticationSpy.callsCount).toBe(0)
+    })
 })
