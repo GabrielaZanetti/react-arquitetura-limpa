@@ -5,6 +5,8 @@ export class EmailValidation implements FieldValidation {
     constructor (readonly field: string) {}
 
     validate(value: string): Error {
-        return new InvalidFieldError()
+        const emailRejex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+            
+        return emailRejex.test(value) ? null : new InvalidFieldError()
     }
 }
