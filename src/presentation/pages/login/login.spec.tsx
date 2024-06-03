@@ -4,7 +4,7 @@ import { createMemoryHistory } from 'history'
 import { faker } from "@faker-js/faker"
 import 'jest-localstorage-mock'
 import { RenderResult, cleanup, fireEvent, render, waitFor } from '@testing-library/react'
-import Login from './login'
+import { Login } from '@/presentation/pages'
 import { ValidationStub, AutenticationSpy } from '@/presentation/test'
 import { InvalidCredentialsError } from '@/domain/erros'
 
